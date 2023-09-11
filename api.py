@@ -14,7 +14,7 @@ def api_endpoint():
         return jsonify({"error": "track is required"}), 400
     
     days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    current_day_of_week = days_of_week[datetime.datetime.utcnow().weekday()]
+    current_day = days_of_week[datetime.datetime.utcnow().weekday()]
 
     current_utc_time = datetime.datetime.utcnow()
     current_utc_time_str = current_utc_time.strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -25,7 +25,7 @@ def api_endpoint():
 
     user_data = {
         "slack_name": slack_name,
-        "current_day_of_week": current_day_of_week,
+        "current_day": current_day,
         "current_utc_time": current_utc_time_str,
         "track": track,
         "github_file_url": github_file_url,
