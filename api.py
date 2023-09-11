@@ -17,7 +17,7 @@ def api_endpoint():
     current_day_of_week = days_of_week[datetime.datetime.utcnow().weekday()]
 
     current_utc_time = datetime.datetime.utcnow()
-    current_utc_time_str = current_utc_time.strftime("%Y-%m-%d %H:%M:%S")
+    current_utc_time_str = current_utc_time.strftime("%Y-%m-%dT%H:%M:%SZ")
 
     github_file_url = "https://github.com/os-k/HNG_projects/blob/main/api.py"
     github_repo_url = "https://github.com/os-k/HNGprojects.git"
