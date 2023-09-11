@@ -29,7 +29,8 @@ def api_endpoint():
         "current_utc_time": current_utc_time_str,
         "track": track,
         "github_file_url": github_file_url,
-        "github_repo_url": github_repo_url
+        "github_repo_url": github_repo_url,
+        "status_code": 200
     }
 
     return jsonify(user_data), 200
