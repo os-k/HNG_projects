@@ -16,8 +16,8 @@ def api_endpoint():
     days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     current_day = days_of_week[datetime.datetime.utcnow().weekday()]
 
-    current_utc_time = datetime.datetime.utcnow()
-    current_utc_time_str = current_utc_time.strftime("%Y-%m-%dT%H:%M:%SZ")
+    utc_time = datetime.datetime.utcnow()
+    utc_time_str = utc_time.strftime("%Y-%m-%dT%H:%M:%SZ")
 
     github_file_url = "https://github.com/os-k/HNG_projects/blob/main/api.py"
     github_repo_url = "https://github.com/os-k/HNGprojects.git"
@@ -26,7 +26,7 @@ def api_endpoint():
     user_data = {
         "slack_name": slack_name,
         "current_day": current_day,
-        "current_utc_time": current_utc_time_str,
+        "utc_time": utc_time_str,
         "track": track,
         "github_file_url": github_file_url,
         "github_repo_url": github_repo_url,
