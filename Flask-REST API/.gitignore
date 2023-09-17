@@ -1,0 +1,6 @@
+.venv/
+HNG-Task2/
+__pycache__/
+data.db
+REST_api.py
+learningREST_api.py
