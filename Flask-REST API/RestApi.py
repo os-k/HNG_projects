@@ -69,5 +69,11 @@ def get_person_by_name(name):
         return jsonify({"message": "Person not found"}), 404
     return jsonify({"id": person.id, "name": person.name})
 
+@app.route('/api', methods=['GET'])
+def get_all_people():
+    people = Person.query.all()
+    people_data = [{"id": person.id, "name": person.name} for person in people]
+    return jsonify(people_data)
+
 if __name__ == "__main__":
     app.run(debug=True)
